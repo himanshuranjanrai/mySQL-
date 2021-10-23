@@ -1,0 +1,49 @@
+WORKING ON ASSIGNMENT DATABASE
+---------------------------------------------------
+>> USE Assignment ;      
+---------------------------------------------------
+
+
+ANSWER -1 >>>>> 
+------------------------
+SELECT  COUNT(*)
+FROM salespeople 
+WHERE Sname LIKE  'a%'  OR  Sname LIKE  'A%' ;
+------------------------
+
+
+
+ANSWER -2 >>>>> 
+------------------------
+SELECT COUNT(*) 
+FROM salespeople 
+INNER JOIN orders on salespeople.Snum = orders.Snum 
+WHERE Amt > 2000;
+------------------------
+
+
+
+ANSWER -3>>>>> 
+-----------------------
+SELECT  COUNT(*)
+FROM salespeople
+WHERE city = 'NewYork';
+------------------------
+
+
+
+ANSWER -4>>>>> 
+-----------------------
+SELECT  *
+FROM salespeople
+WHERE city ="LONDON" OR city="PARIS";
+----------------------
+
+
+ANSWER -5>>>>> 
+----------------------
+SELECT salespeople.Sname, 
+orders.Odate 
+FROM salespeople 
+INNER JOIN orders ON salespeople.Snum = orders.Snum;
+------------------------
